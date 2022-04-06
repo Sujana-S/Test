@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: GitHub Actions Demo   #The name of the workflow(Optional)
 on: [push]
 jobs:
