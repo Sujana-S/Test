@@ -1,0 +1,13 @@
+name: GitHub Actions Demo   #The name of the workflow(Optional)
+on: [push]
+jobs:
+  check-bats-version:   #Job-name
+    runs-on: ubuntu-latest  #runner-machine
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2     #Github branch checkout
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "This job's status is ${{ job.status }}."
